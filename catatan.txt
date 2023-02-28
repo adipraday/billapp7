@@ -1,0 +1,1097 @@
+<div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              No. Kontrak
+            </label>
+            <input
+              type="text"
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                id="no_kontrak"
+              placeholder="Form control sm"/>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Biro
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Form control sm"
+              id="k_biro">
+              <option selected>Pilih Biro</option>
+              @foreach($biros as $biro)
+                <option value="{{ $biro->k_biro }}">{{ $biro->n_biro }}</option>
+              @endforeach
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Klien
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm"
+              id="k_klien">
+              <option selected>Pilih Klien</option>
+              @foreach($kliens as $klien)
+                <option value="{{ $klien->k_klien }}">{{ $klien->n_klien }}</option>
+              @endforeach
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Nilai Kontrak
+            </label>
+            <input
+              type="text"
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Form control sm"
+              id="nilai"/>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Jenis Kontrak
+            </label>
+            <div class="form-check mr-5">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none 
+                transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+                type="radio" name="flexRadioDefault" id="jenis_kontrak">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                Non Barter
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none 
+                transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+                type="radio" name="flexRadioDefault" id="jenis_kontrak" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Barter
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none 
+                transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" 
+                type="radio" name="flexRadioDefault" id="jenis_kontrak" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Barter & Non Barter
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Jenis Barter
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              placeholder="Form control sm"
+              id="BELUM-jbarter">
+              <option selected>Pilih Jenis Barter</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Keterangan Pajak
+            </label>
+            <div class="form-check mr-5">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                Termasuk PPN
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Tanpa PPN
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Nilai Non Barter
+            </label>
+            <input
+              type="text"
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm"
+            />
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Nilai Barter
+            </label>
+            <input
+              type="text"
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm"
+            />
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Nilai Real Kontral
+            </label>
+            <input
+              type="text"
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm"
+            />
+        </div>
+    </div>
+    
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Pengiklan Atas Nama
+            </label>
+            <div class="form-check mr-5">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                Biro
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Klien
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Jatuh Tempo Atas Nama
+            </label>
+            <div class="form-check mr-5">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                Biro
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Klien
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Choose Produk
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm">
+              <option selected>Pilih Jenis Barter</option>
+              <option>Not Available</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Chose Group Head
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm">
+              <option selected>Pilih Jenis Barter</option>
+              <option>Not Available</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Choose Industri
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm">
+              <option selected>Pilih Jenis Barter</option>
+              <option>Not Available</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Choose Account Executive
+            </label>
+            <select
+              class="form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300
+                rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput4"
+              placeholder="Form control sm">
+              <option selected>Pilih Jenis Barter</option>
+              <option>Not Available</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <div class="form-check">
+                <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                  Ket Iklan Bundling
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center">
+        <div class="mb-3 xl:w-96">
+            <label
+              for="exampleFormControlInput4" class="form-label inline-block mb-2 text-gray-700 text-sm">
+              Penomoran Seri Pajak
+            </label>
+            <div class="form-check mr-5">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+                Bundling
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+                Per Invoice
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    radio button solve :
+    https://github.com/Dogfalo/materialize/issues/3261#:~:text=20170817/contact.php-,gunjan008,q1%22%20value%3D%221%22%20id%3D%22q_1_1%22%3E%3Clabel%20for%3D%22q_1_1%22%3E5%2C000GD%3C/label%3E%0A%09%09%09%09%09%3C/div%3E,-%F0%9F%91%8D
+
+    https://santrikoding.com/tutorial-laravel-crud-ajax-5-edit-dan-update-data-dengan-ajax
+
+    https://www.tutsmake.com/laravel-eloquent-join-2-tables-example/
+
+    https://tailwind-elements.com/docs/standard/components/paragraphs/?
+
+    https://tailwindcss.com/docs/container
+
+    https://github.com/adipraday/projiklanlaraveljetstream/blob/master/tahapan_tutorial.txt
+
+
+    SELECT a.nik, a.nama, LEFT(b.kd_gol,2) as kd_gol, c.nm_jabat 
+FROM ms03_kary_profil a, ms03_riwayat_entitas b, ms02_org_jabatan c 
+WHERE a.nik = b.nik AND b.jabat = c.jabat AND b.flag_aktif = '1' AND a.nik = '$nik'
+
+
+CREATE INDEX index_media_order
+ON media_order (k_order, k_biro, k_klien);
+
+CREATE INDEX index_mbiro
+ON mbiro (k_biro);
+
+CREATE INDEX index_mklien
+ON mklien (k_klien);
+
+CREATE INDEX index_sproduk
+ON sproduk (k_sproduk);
+
+CREATE INDEX index_mindustri
+ON mindustri (k_indus);
+
+CREATE INDEX index_mgrouphead
+ON mgrouphead (k_grup);
+
+CREATE INDEX index_msales
+ON msales (k_sales);
+
+
+
+http://meet.google.com/byu-bqty-eze
+
+
+http://meet.google.com/byu-bqty-eze
+
+
+tutor admin
+https://drive.google.com/file/d/1XAmjXLKBEWgogtOT_G5bfjpQGkGHMKyV/view
+
+==========================================================================================
+
+Input order majalah tempo indonesia
+
+Judul => textbox *
+Cara Bayar => select *
+No. Edisi => select *
+Jenis Iklan => select *
+Layout => select *
+Tarif => textbox *
+Jasa Produksi => select *
+Tarif Jasa => textbox *
+Jml Eksemplar => textbox *
+Brutto => textbox *
+Diskon dalam => textbox *
+Netto => textbox *
+ppn => textbox *
+Tagihan => textbox *
+Diskon luar => textbox *
+Keterangan => textarea *
+
+Cara Bayar :
+// Pembayaran Ditunda
+// Pembayaran Uang Muka
+// Pembayaran Cash
+
+No. Edisi :
+// Load db => medisi_mbm (3 data terakhir)
+
+Jenis Iklan :
+// Load db => mjenis_majalah
+
+Layout :
+// Load db => mtarif_mbm
+
+Jasa Produksi :
+// Load db => mjasa_majalah
+
+Tarif :
+// autofill after layout
+
+Tarif Jasa :
+// autofill after jasa produksi
+
+Brutto :
+// tarif + tarif jasa = Brutto
+
+Netto :
+// brutto - diskon dalam = netto
+
+Tagihan :
+// Netto + ppn = Tagihan
+
+
+
+
+judul => 
+cara_bayar => 
+no_edisi => 
+jenis_iklan => 
+layout_majalah => 
+jasa_produksi => 
+diskon_dalam =>  
+diskon_luar => 
+tarif => 
+jml_eksemplar => 
+tarif_jasa => 
+brutto => 
+netto => 
+ppn => 
+tagihan => 
+keterangan => 
+
+
+judul, 
+cara_bayar, 
+k_edisi, 
+k_jenis, 
+k_tarif, 
+k_jasa, 
+discp_in, 
+discr_in, 
+discp_out, 
+discr_out, 
+hrg_tarif, 
+jml_eks, 
+hrg_jasa, 
+nharga, 
+neto, 
+ppnp, 
+ppnr, 
+ttagih, 
+catatan,
+
+k_order,
+no_kontrak,
+k_biro,
+k_klien,
+atasnama,
+k_indus,
+user_input,
+k_produk,
+k_sproduk,
+k_sales,
+k_grup,
+
+
+no_kwt,
+nik,
+tgl_terbit,
+tgl_jt,
+type,
+tgl_pajak,
+jam_input,
+tgl_input,
+j_atasnama,
+
+=========================================
+login custom
+
+// routing web.php
+// kernel.php
+// CheckSession.php penambahan file
+// Login_Controller.php penambahan file
+// Login_Model.php penambahan file
+
+=========================================
+
+note 1 Feb 2023
+//  input order majalah tempo Indonesia ( kurang field: tgl_jt, tgl_pajak, trs_pajak, sts_pajak, jam_input, stat_validasi, k_produk )
+    dan user_input ganti pakai nik.
+
+=========================================
+
+input koran
+
+Jenis Iklan = mjenis_koran
+rubrikasi   = mrubrik_koran
+layout      = mtarif_koran
+
+=========================================
+
+iklan_koran
+
+nik             => nik                      => ??????,
+no_order        => no_order (kosong)        => ok,
+k_order         => k_order (controller)     =>,
+k_biro          => k_biro (hidden)          => ok,
+k_klien         => k_klien (hidden)         => ok,
+atasnama        => atasnama (hidden)        => ok,
+j_atasnama      => j_atasnama (hidden)      => ok,
+k_produk_old    => NULL                     => ok,
+k_sproduk_old   => NULL                     => ok,
+k_sales_old     => NULL                     => ok,
+k_indus         => k_indus (hidden)         => ok,
+judul           => judul                    => ok,
+k_jenis         => jenis_iklan              => ok,
+k_rubrik        => rubrikasi                => ok,
+k_tarif         => layout                   => ok,
+warna           => ket_display              => ok,
+hal             => halaman                  => ok,
+jmuat           => jumlah_tayang            => ok,
+jkolom          => jumlah_kolom             => ok,
+jtinggi         => tinggi                   => ok,
+jtarif          =>                          => ??????,  
+tarif           => tarif                    => ok,   
+tharga          =>                          => ??????,
+discp_in        => diskon_dalam => discp_in => ??????,  
+discr_in        => diskon_dalam => discr_in => ??????,
+nharga          => brutto                   => ok,
+ppnp            => ppn  => ppnp             => ??????,
+ppnr            => ppn  => ppnr             => ??????,
+materai         => default 0 (hidden)       => ok,
+ttagih          => tagihan                  => ok,    
+discp_out       => default 0 (hidden)       => ok,
+discr_out       => default 0 (hidden)       => ok,
+tgl_inv         => tgl_inv (controller)     => ,     
+tgl_jt          => tgl_jt (controller)      => ,
+noseri          => kosong                   => ok,  
+tgl_pajak       => tgl_pajak (controller)   => ,
+sts_pajak       => default 0 (hidden)       => ok,
+trs_pajak       => ??                       => ??????,
+type            => jenis_kontrak (hidden)   => ok,
+sts_barter      => jbarter (hidden)         => ok,
+flag_btl        => kosong                   => ok,
+tgl_input       => tgl_input (hidden)       => ok, 
+jam_input       => jam_input (hidden)       => ok,
+user_input      => user_input (hidden)      => ok,
+note            => keterangan               => ok,
+flag_update     => kosong                   => ok,
+jam_update      => kosong                   => ok,
+tgl_update      => kosong                   => ok,
+user_update     => kosong                   => ok,
+cara_bayar      => cara_bayar               => ok,
+validasi        => kosong                   => ok,
+stat_validasi   => default 0 (hidden)       => ok,
+ket_validasi    => kosong                   => ok,
+user_validasi   => NULL                     => ok,
+tgl_validasi    => NULL                     => ok,
+jam_validasi    => NULL                     => ok,
+flag_paket_lama => kosong                   => ok,
+ket_paket       => NULL                     => ok,
+petugas         => NULL                     => ok,
+k_produk        => k_produk (hidden)        => ok,
+k_sproduk       => k_sproduk (hidden)       => ok,
+k_sales         => k_sales (hidden)         => ok,
+flag_protect    => NULL                     => ok,
+flag_revisi     => NULL                     => ok,
+nik_asal        => NULL                     => ok,
+ket_revisi      => NULL                     => ok,
+k_grup_old      => NULL                     => ok,
+k_grup          => k_grup (hidden)          => ok,
+tagihan_bermasalah    => NULL               => ok,
+keterangan_bermasalah => NULL               => ok,
+
+
+============================================================================
+
+jumlah tayang (otomatis) = dihitung dari pemuatan order (tgl / periode)
+  
+ket_muat_order, 
+
+periode_order_start, 
+periode_order_akhir, 
+jenis_invoice, 
+ 
+
+jenis_tarif => ?,
+
+
+opt_diskon_dalam, 
+ 
+netto => ?,
+biaya_produksi => ?,
+
+==============================================================================================================
+
+
+public function saveorderkorantempo(Request $request)
+    {
+
+        $tgl_input = new \DateTime();
+        $month = now()->month;
+        $year = now()->year;
+        $tahun = substr(now()->year,-2);
+        $nokwt0 = MIklanMajalahMbm::select('no_kwt')->whereMonth('tgl_input', $month)->whereYear('tgl_input', $year)->get()->count();
+        $nokwt1 = $nokwt0+1;
+        
+        $nik = 'K'.$tahun.$month.sprintf('%04s', $nokwt1);
+
+        $date_input = $tgl_input;
+        date_add($date_input,date_interval_create_from_date_string("30 days"));
+        $tgl_jt = date_format($date_input,"Y-m-d");
+
+        //define validation rules
+        $validator = Validator::make($request->all(), [
+            'k_order'   => 'required',
+            'k_biro'    => 'required',
+        ]);
+
+        //check if validation fails
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        $inputorderkoran = MIklanKoran::create([
+
+            'nik'             => $nik,
+            'k_order'         => $request->k_order,
+            'k_biro'          => $request->k_biro,
+            'k_klien'         => $request->k_klien, 
+            'atasnama'        => $request->atasnama, 
+            'j_atasnama'      => $request->j_atasnama,
+            'k_indus'         => $request->k_indus,
+            'judul'           => $request->judul,
+            'k_jenis'         => $request->k_jenis,
+            'k_rubrik'        => $request->k_rubrik,
+            'k_tarif'         => $request->k_tarif,
+            'warna'           => $request->warna,
+            'hal'             => $request->hal, 
+            'jmuat'           => $request->jmuat, 
+            'jkolom'          => $request->jkolom, 
+            'jtinggi'         => $request->jtinggi, 
+            'jtarif'          => $request->jtarif,   
+            'tarif'           => $request->tarif,    
+            'tharga'          => $request->tharga, 
+            'discp_in'        => $request->discp_in,   
+            'discr_in'        => $request->discr_in, 
+            'nharga'          => $request->nharga, 
+            'ppnp'            => $request->ppnp, 
+            'ppnr'            => $request->ppnr, 
+            'materai'         => $request->materai, 
+            'ttagih'          => $request->ttagih,     
+            'discp_out'       => $request->discp_out, 
+            'discr_out'       => $request->discr_out, 
+            'tgl_inv'         => $tgl_input,      
+            'tgl_jt'          => $tgl_jt,
+            'tgl_pajak'       => $tgl_jt, 
+            'sts_pajak'       => $request->sts_pajak, 
+            // 'trs_pajak'       => $trs_pajak, /////////////
+            'type'            => $request->type,
+            'sts_barter'      => $request->sts_barter,
+            'tgl_input'       => $request->tgl_input, 
+            'jam_input'       => $request->jam_input,
+            'user_input'      => $request->user_input,
+            'note'            => $request->note,
+            'cara_bayar'      => $request->cara_bayar,
+            'stat_validasi'   => $request->stat_validasi,
+            'k_produk'        => $request->k_produk,
+            'k_sproduk'       => $request->k_sproduk,
+            'k_sales'         => $request->k_sales,
+            'k_grup'          => $request->k_grup,
+
+        ]);
+
+        //return response
+        return response()->json([
+            'success'   => true,
+            'message'   => 'Data Berhasil Disimpan!',
+            'data'      => $inputorderkoran
+        ]);
+
+    }
+
+
+======================================================================================================
+
+'nik'             => $nik,                    ============> ##
+'k_order'         => $request->k_order,       ============> ##
+'k_biro'          => $request->k_biro,        ============> ##
+'k_klien'         => $request->k_klien,       ============> ##
+'atasnama'        => $request->atasnama,      ============> ##
+'j_atasnama'      => $request->j_atasnama,    ============> ##
+'k_indus'         => $request->k_indus,       ============> ##
+'judul'           => $request->judul,         ============> ##
+'k_jenis'         => $request->k_jenis,       ============> ##
+'k_rubrik'        => $request->k_rubrik,      ============> ##
+'k_tarif'         => $request->k_tarif,       ============> ##
+'warna'           => $request->warna,         ============> ##
+'hal'             => $request->hal,           ============> ##
+'jmuat'           => $request->jmuat,         ============> ##
+'jkolom'          => $request->jkolom,        ============> ##
+'jtinggi'         => $request->jtinggi,       ============> ##
+'jtarif'          => $request->jtarif,        ============> ##
+'tarif'           => $request->tarif,         ============> ##
+'tharga'          => $request->tharga,        ============> ##
+'discp_in'        => $request->discp_in,      ============> ##
+'discr_in'        => $request->discr_in,      ============> ##
+'nharga'          => $request->nharga,        ============> ##
+'ppnp'            => $request->ppnp,          ============> ##
+'ppnr'            => $request->ppnr,          ============> ##
+'materai'         => $request->materai,       ============> ##
+'ttagih'          => $request->ttagih,        ============> ##
+'discp_out'       => $request->discp_out,     ============> ##
+'discr_out'       => $request->discr_out,     ============> ##
+'tgl_inv'         => $tgl_input,              ============> ##
+'tgl_jt'          => $tgl_jt,                 ============> ##
+'tgl_pajak'       => $tgl_jt,                 ============> ##
+'sts_pajak'       => $request->sts_pajak,     ============> ##
+// 'trs_pajak'       => $trs_pajak, ////      ============> ##
+'type'            => $request->type,          ============> ##
+'sts_barter'      => $request->sts_barter,    ============> ##
+'tgl_input'       => $request->tgl_input,     ============> ##
+'jam_input'       => $request->jam_input,     ============> ##
+'user_input'      => $request->user_input,    ============> ##
+'note'            => $request->note,          ============> ##
+'cara_bayar'      => $request->cara_bayar,    ============> ##
+'stat_validasi'   => $request->stat_validasi, ============> ##
+'k_produk'        => $request->k_produk,      ============> ##
+'k_sproduk'       => $request->k_sproduk,     ============> ##
+'k_sales'         => $request->k_sales,       ============> ##
+'k_grup'          => $request->k_grup,        ============> ##
+
+
+===============================================================================================================================
+
+Table fields of iklan_koran
+
+
+nik	
+no_order	
+k_order	
+k_biro	
+k_klien	
+atasnama	
+j_atasnama	
+k_produk_old	
+k_sproduk_old	
+k_sales_old	
+k_indus	
+judul	
+k_jenis	
+k_rubrik	
+k_tarif	
+warna	
+hal	
+jmuat	
+jkolom	
+jtinggi	
+jtarif	
+tarif	
+tharga	
+discp_in	
+discr_in	
+nharga	
+ppnp	
+ppnr	
+materai	
+ttagih	
+discp_out	
+discr_out	
+tgl_inv	
+tgl_jt	
+noseri	
+tgl_pajak	
+sts_pajak	
+trs_pajak	
+type	
+sts_barter	
+flag_btl	
+tgl_input	
+jam_input	
+user_input	
+note	
+flag_update	
+jam_update	
+tgl_update	
+user_update	
+cara_bayar	
+validasi	
+stat_validasi	
+ket_validasi	
+user_validasi	
+tgl_validasi	
+jam_validasi	
+flag_paket_lama	
+ket_paket	
+petugas	
+k_produk	
+k_sproduk	
+k_sales	
+flag_protect	
+flag_revisi	
+nik_asal	
+ket_revisi	
+k_grup_old	
+k_grup	
+tagihan_bermasalah	
+keterangan_bermasalah
+
+=======================================================================================================================
+
+Tables field of TempoTV (iklan_tempotv)
+
+nik
+no_order
+k_order
+k_biro      
+k_klien     
+atasnama  
+j_atasnama  
+k_produk_old  
+k_sproduk_old  
+k_sales_old  
+k_indus  
+judul                                     
+k_jenis  
+k_rubrik  
+k_tarif  
+warna   
+hal                   
+jmuat   
+jkolom  
+jtinggi  
+jtarif  
+tarif    
+tharga     
+discp_in  
+discr_in  
+nharga     
+ppnp    
+ppnr      
+materai  
+ttagih     
+discp_out  
+discr_out  
+tgl_inv     
+tgl_jt      
+noseri
+tgl_pajak
+sts_pajak
+trs_pajak
+type
+sts_barter
+flag_btl
+tgl_input
+jam_input
+user_input
+note
+flag_update
+jam_update
+tgl_update
+user_update
+cara_bayar
+validasi
+stat_validasi
+ket_validasi
+user_validasi
+tgl_validasi
+jam_validasi
+flag_paket_lama
+ket_paket
+petugas
+k_produk
+k_sproduk
+k_sales
+flag_protect
+flag_revisi
+nik_asal
+ket_revisi
+k_grup_old
+k_grup
+tagihan_bermasalah
+keterangan_bermasalah
+
+=======================================================================================================================
+
+Input field of TempoTV (iklan_tempotv)
+
+nik
+k_order
+k_biro
+k_klien
+atasnama
+j_atasnama
+k_indus
+judul
+k_jenis
+k_rubrik
+k_tarif
+warna
+hal
+jmuat
+jkolom
+jtinggi
+jtarif
+tarif
+tharga
+discp_in
+discr_in
+nharga
+ppnp
+ppnr
+materai
+ttagih
+discp_out
+discr_out
+tgl_inv
+tgl_jt
+tgl_pajak
+sts_pajak
+trs_pajak
+type
+sts_barter
+tgl_input
+jam_input
+user_input
+cara_bayar
+k_produk
+k_sproduk
+k_sales
+k_grup
+
+==================================================================================================================================================
+
+Model Field of TempoTV
+
+'nik',
+'k_order',
+'k_biro',
+'k_klien',
+'atasnama',
+'j_atasnama',
+'k_indus',
+'judul',
+'k_jenis',
+'k_rubrik',
+'k_tarif',
+'warna',
+'hal',
+'jmuat',
+'jkolom',
+'jtinggi',
+'jtarif',
+'tarif',
+'tharga',
+'discp_in',
+'discr_in',
+'nharga',
+'ppnp',
+'ppnr',
+'materai',
+'ttagih',
+'discp_out',
+'discr_out',
+'tgl_inv',
+'tgl_jt',
+'tgl_pajak',
+'sts_pajak',
+'trs_pajak',
+'type',
+'sts_barter',
+'tgl_input',
+'jam_input',
+'user_input',
+'cara_bayar',
+'k_produk',
+'k_sproduk',
+'k_sales',
+'k_grup',
+
+==================================================================================================================================================
+
+Controller Field of TempoTV
+
+'nik'         =>$request->nik,
+'k_order'     =>$request->k_order,
+'k_biro'      =>$request->k_biro,
+'k_klien'     =>$request->k_klien,
+'atasnama'    =>$request->atasnama,
+'j_atasnama'  =>$request->j_atasnama,
+'k_indus'     =>$request->k_indus,
+'judul'       =>$request->judul,
+'k_jenis'     =>$request->k_jenis,
+'k_rubrik'    =>$request->k_rubrik,
+'k_tarif'     =>$request->k_tarif,
+'warna'       =>$request->warna,
+'hal'         =>$request->hal,
+'jmuat'       =>$request->jmuat,
+'jkolom'      =>$request->jkolom,
+'jtinggi'     =>$request->jtinggi,
+'jtarif'      =>$request->jtarif,
+'tarif'       =>$request->tarif,
+'tharga'      =>$request->tharga,
+'discp_in'    =>$request->discp_in,
+'discr_in'    =>$request->discr_in,
+'nharga'      =>$request->nharga,
+'ppnp'        =>$request->ppnp,
+'ppnr'        =>$request->ppnr,
+'materai'     =>$request->materai,
+'ttagih'      =>$request->ttagih,
+'discp_out'   =>$request->discp_out,
+'discr_out'   =>$request->discr_out,
+'tgl_inv'     =>$request->tgl_inv,
+'tgl_jt'      =>$request->tgl_jt,
+'tgl_pajak'   =>$request->tgl_pajak,
+'sts_pajak'   =>$request->sts_pajak,
+'trs_pajak'   =>$request->trs_pajak,
+'type'        =>$request->type,
+'sts_barter'  =>$request->sts_barter,
+'tgl_input'   =>$request->tgl_input,
+'jam_input'   =>$request->jam_input,
+'user_input'  =>$request->user_input,
+'cara_bayar'  =>$request->cara_bayar,
+'k_produk'    =>$request->k_produk,
+'k_sproduk'   =>$request->k_sproduk,
+'k_sales'     =>$request->k_sales,
+'k_grup'      =>$request->k_grup,
+
+==================================================================================================================================================
+
+Input Field of TempoTV
+
+"nik"       : nik,
+"k_order"   : k_order,
+"k_biro"    : k_biro,
+"k_klien"   : k_klien,
+"atasnama"  : atasnama,
+"j_atasnama": j_atasnama,
+"k_indus"   : k_indus,
+"judul"     : judul,
+"k_jenis"   : k_jenis,
+"k_rubrik"  : k_rubrik,
+"k_tarif"   : k_tarif,
+"warna"     : warna,
+"hal"       : hal,
+"jmuat"     : jmuat,
+"jkolom"    : jkolom,
+"jtinggi"   : jtinggi,
+"jtarif"    : jtarif,
+"tarif"     : tarif,
+"tharga"    : tharga,
+"discp_in"  : discp_in,
+"discr_in"  : discr_in,
+"nharga"    : nharga,
+"ppnp"      : ppnp,
+"ppnr"      : ppnr,
+"materai"   : materai,
+"ttagih"    : ttagih,
+"discp_out" : discp_out,
+"discr_out" : discr_out,
+"tgl_inv"   : tgl_inv,
+"tgl_jt"    : tgl_jt,
+"tgl_pajak" : tgl_pajak,
+"sts_pajak" : sts_pajak,
+"trs_pajak" : trs_pajak,
+"type"      : type,
+"sts_barter": sts_barter,
+"tgl_input" : tgl_input,
+"jam_input" : jam_input,
+"user_input": user_input,
+"cara_bayar": cara_bayar,
+"k_produk"  : k_produk,
+"k_sproduk" : k_sproduk,
+"k_sales"   : k_sales,
+"k_grup"    : k_grup,
